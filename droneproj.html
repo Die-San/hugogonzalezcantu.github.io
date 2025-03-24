@@ -1,0 +1,106 @@
+<!DOCTYPE HTML>
+    <html>
+        <head>
+            <title>Hugo's Project Portfolio</title>
+            <meta charset="utf-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+            <link rel="stylesheet" href="assets/css/main.css" />
+            <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        </head>
+        <body class="is-preload">
+    
+            <!-- Wrapper -->
+                <div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+                <div id="intro">
+                    <h1>Senior Design Project: Fight Flight<br /> 
+                        Fight Flight</h1>
+                    <ul class="actions">
+                        <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+                    </ul>
+                </div>
+
+                <nav id="nav">
+                    <ul class="icons">
+                        <li><a href="https://www.linkedin.com/in/hugo-gonzalez-cantu-09a049243/" target="_blank" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+                        <li><a href="https://drive.google.com/drive/folders/1Pd1X-imPC6sIYG-2xwPoGUqjVrboyT-y?usp=sharing" target="_blank"  class="icon brands fa-google-drive"><span class="label">fa-googledrive</span></a></li>
+                        <li><a href="https://github.com/Die-San" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                    </ul>
+                </nav>
+                <div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2>Senior Design Project: Fight Flight</h2>
+								</header>
+								<a class="image main"><img src="images/vote1.png" alt="" /></a>
+                                <a class="image main"><img src="images/vote2.png" alt="" /></a>
+                                    <h3>Project Objective</h3>
+                                <p></p>
+                                    <h3>Project Details</h3>
+                                <h4>The project consists of two main parts: The hardware and software.<br /></h4>
+                                <h4>Hardware</h4>
+                                <ul>
+                                    <li>The hardware part of the project is comprised of the controllers and the receiver. In order to keep the project cheap and simple to assemble, while being able to operate in a room with multiple oncoming and outgoing signals; it was decided that the main method of communication between devices would be through a 433Mhz RF transmitter/receiver combo.</li>
+                                    <li>Transmitters are made off 3 large buttons which interact with the custom PCB [consists of an ATtiny814 IC, a voltage regulator, the 433Mhz transmitter and a USB-C connection] and send a unique signal depending on the button that is pressed.</li>
+                                    <li>As for the Receiver, it consists of an RF receiver attached to a microcontroller which will serially communicate with the room's primary computer, on which itll locally store all of the legislators' voting data and voting count, to later upload to the main database.</li>
+                                </ul> 
+                                <img src="images/RF.jpg" width="500" height="auto" />
+                                <h4>Software</h4>
+                                <ul>
+                                    <li>The software segment primarily consists of very simple code that will go on each of the 15 transmitters that will be placed in front of the legislators' seats. Simply put, each button on each of the 15 units will output a different signal in this format:  (05 01 1), which Would mean, in room 305, seat #1, (Yes).</li>
+                                    <li>The Receiver, which will be under the committee room's computer desk, or alternatively sitting in the server rack inside the room, will be in charge of decoding all of the received signals, and then relay them to the PC via serial communication or other alternate forms of communicaiton such as bluetooth.</li>
+                                    <li>The custom software that will run on the PC along with the receiver will be in charge of popping up a window on the committee screens and official stream, and then show and keep track of which representative votes YES, NO, or EXPL (to signal that they wish to explain something regarding their decision). </li>
+                                    <li>The software will also locally store a .txt or .xlsx file with all information for that specific vote. When a vote is over, the app will store the data and go on to the next template to store the last vote separately. This data will then be sent to the House of Representatives' database.</li>
+                                </ul> 
+                                <h4>Budgetting</h4>
+                                    <img src="images/votebudget.png" width="1150" height="auto" />
+                                    
+                                    <a href="https://docs.google.com/document/d/13eOaqwE0s9WbVHg4g6TTqwRaaOc9aY-GeSd6l9iwrHc/edit?usp=sharing" target="_blank" class="button large">Project Proposal PDF</a>
+							</article>
+
+                </div>
+				<!-- Footer -->
+                <footer id="footer">
+                    <section>
+                        <form method="post" action="#">
+                            <div class="fields">
+                                <section>
+                                    <h3>Email</h3>
+                                    <h3>hugojrgc@gmail.com</h3>
+                                </section>
+                            </div>
+                        </form>
+                    </section>
+                    <section class="split contact">
+                        <section class="alt">
+                        <section>
+                            <h3>Social</h3>
+                            <ul class="icons alt">
+                                <li><a href="https://www.linkedin.com/in/hugo-gonzalez-cantu-09a049243/" target="_blank" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
+                                <li><a href="https://drive.google.com/drive/folders/1Pd1X-imPC6sIYG-2xwPoGUqjVrboyT-y?usp=sharing" target="_blank"  class="icon brands fa-google-drive"><span class="label">fa-googledrive</span></a></li>
+                                <li><a href="https://github.com/Die-San" target="_blank" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+                            </ul>
+                        </section>
+                    </section>
+                </footer>
+
+            <!-- Copyright -->
+                <div id="copyright">
+                    <ul><li>&copy; I borrowed and modded this template off of</li><li>&copy;<a href="https://html5up.net">HTML5 UP</a></li></ul>
+                </div>s
+
+                </div>
+
+                <!-- Scripts -->
+                    <script src="assets/js/jquery.min.js"></script>
+                    <script src="assets/js/jquery.scrollex.min.js"></script>
+                    <script src="assets/js/jquery.scrolly.min.js"></script>
+                    <script src="assets/js/browser.min.js"></script>
+                    <script src="assets/js/breakpoints.min.js"></script>
+                    <script src="assets/js/util.js"></script>
+                    <script src="assets/js/main.js"></script>
+        </body>
+    </html>
