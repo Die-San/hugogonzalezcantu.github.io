@@ -51,6 +51,13 @@
                                     <li>Transmitters are made off 3 large buttons which interact with the custom PCB [consists of an ATtiny814 IC, a voltage regulator, the 433Mhz transmitter and a USB-C connection] and send a unique signal depending on the button that is pressed.</li>
                                     <li>As for the Receiver, it consists of an RF receiver attached to a microcontroller which will serially communicate with the room's primary computer, on which itll locally store all of the legislators' voting data and voting count, to later upload to the main database.</li>
                                 </ul> 
+                                <h4>Software</h4>
+                                <ul>
+                                    <li>The software segment primarily consists of very simple code that will go on each of the 15 transmitters that will be placed in front of the legislators' seats. Simply put, each button on each of the 15 units will output a different signal in this format:  (05 01 1), which Would mean, in room 305, seat #1, (Yes).</li>
+                                    <li>The Receiver, which will be under the committee room's computer desk, or alternatively sitting in the server rack inside the room, will be in charge of decoding all of the received signals, and then relay them to the PC via serial communication or other alternate forms of communicaiton such as bluetooth.</li>
+                                    <li>The custom software that will run on the PC along with the receiver will be in charge of popping up a window on the committee screens and official stream, and then show and keep track of which representative votes YES, NO, or EXPL (to signal that they wish to explain something regarding their decision). </li>
+                                    <li>The software will also locally store a .txt or .xlsx file with all information for that specific vote. When a vote is over, the app will store the data and go on to the next template to store the last vote separately. This data will then be sent to the House of Representatives' database.</li>
+                                </ul> 
                                     <img src="images/vote1.png" width="400" height="auto" />
 									
 							</article>
