@@ -33,32 +33,20 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<h2>Custom Voting System for Legislature</h2>
+									<h2>Chem-E. Car Project</h2>
 								</header>
-								<a class="image main"><img src="images/vote1.png" alt="" /></a>
-                                <a class="image main"><img src="images/vote2.png" alt="" /></a>
+								<a class="image main"><img src="images/literallyme.jpg" alt="" /></a>
                                     <h3>Project Objective</h3>
-                                <p>This project was proposed to my superiors over at the New Mexico House of Representatives in order to modernize the committee rooms' voting system from a primarily verbal system to a digitally recorded one.<p>
-								<p>It is aimed at replacing private-owned voting systems, which are currently in use, with inexpensive, reliable and in-house developed options that will save the House of Representatives up to $80,000 in equipment and installation alone.</p>
+                                        <p>Chem E. Car is a competition hosted by the American Institute of Chemical Engineers (AIChe), which aims to connect chemical, electrical, and mechanical engineering disciplines in order to create a small car to compete. <p> 
+                                    <h3>Involvement</h3>
+                                    <ul>
+                                        <li>Collaborated with two electrical engineers to pick some of the Printed-Circuit-Board (PCB) components seen above, primarily the transistors to lower gate opening time as well as limit voltage going to system from +20V down to 5V (transistor is labeled U6, others avaliable in second PCB image) and microcontroller (Arduino Nano) that'd act as the brain of the whole vehicle.</p>
+                                        <li>Coordinated, evaluated, and managed performance tests on the car, “Curious George”, to ensure all systems (stopping, drive, and checmical injection) functioned to specification. Corrected major design flaws in the electrical system for “Curious George”, ran the required distance of 15 to 25 ft 2 times over with all systems and extra weight attached.</p>
+                                        <li>Fabricated customized enclosures in SolidWorks to house exposed electrical components on the top part of the car.</p>
+                                    </ul>
+                                <img src="images/chemecar1.png" width="500" height="auto" />
 
-                                    <h3>Project Details</h3>
-                                <h4>The project consists of two main parts: The hardware and software.<br /></h4>
-                                <h4>Hardware</h4>
-                                <ul>
-                                    <li>The hardware part of the project is comprised of the controllers and the receiver. In order to keep the project cheap and simple to assemble, while being able to operate in a room with multiple oncoming and outgoing signals; it was decided that the main method of communication between devices would be through a 433Mhz RF transmitter/receiver combo.</li>
-                                    <li>Transmitters are made off 3 large buttons which interact with the custom PCB [consists of an ATtiny814 IC, a voltage regulator, the 433Mhz transmitter and a USB-C connection] and send a unique signal depending on the button that is pressed.</li>
-                                    <li>As for the Receiver, it consists of an RF receiver attached to a microcontroller which will serially communicate with the room's primary computer, on which itll locally store all of the legislators' voting data and voting count, to later upload to the main database.</li>
-                                </ul> 
-                                <img src="images/RF.jpg" width="500" height="auto" />
-                                <h4>Software</h4>
-                                <ul>
-                                    <li>The software segment primarily consists of very simple code that will go on each of the 15 transmitters that will be placed in front of the legislators' seats. Simply put, each button on each of the 15 units will output a different signal in this format:  (05 01 1), which Would mean, in room 305, seat #1, (Yes).</li>
-                                    <li>The Receiver, which will be under the committee room's computer desk, or alternatively sitting in the server rack inside the room, will be in charge of decoding all of the received signals, and then relay them to the PC via serial communication or other alternate forms of communicaiton such as bluetooth.</li>
-                                    <li>The custom software that will run on the PC along with the receiver will be in charge of popping up a window on the committee screens and official stream, and then show and keep track of which representative votes YES, NO, or EXPL (to signal that they wish to explain something regarding their decision). </li>
-                                    <li>The software will also locally store a .txt or .xlsx file with all information for that specific vote. When a vote is over, the app will store the data and go on to the next template to store the last vote separately. This data will then be sent to the House of Representatives' database.</li>
-                                </ul> 
-                                <h4>Budgetting</h4>
-                                    <img src="images/votebudget.png" width="1150" height="auto" />
+                                    <img src="images/chemecar2.png" width="1150" height="auto" />
                                     
                                     <a href="https://docs.google.com/document/d/13eOaqwE0s9WbVHg4g6TTqwRaaOc9aY-GeSd6l9iwrHc/edit?usp=sharing" target="_blank" class="button large">Project Proposal PDF</a>
 							</article>
