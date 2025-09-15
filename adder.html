@@ -14,7 +14,7 @@
 
 				<!-- Intro -->
                 <div id="intro">
-                    <h1>The Custom Alarm Clock</h1>
+                    <h1>4-Bit Adder</h1>
                     <ul class="actions">
                         <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
                     </ul>
@@ -32,41 +32,36 @@
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
-									<h2>The Custom Alarm Clock</h2>
+									<h2>The 4-bit Adder</h2>
 								</header>
                                     <h3>Project Objective</h3>
-                                        <p> In this project, I take on thet task of designing an alarm clock from the ground up to meet multiple requirements, as bequested by my girlfriend.</p> 
+                                        <p> In this project, I aimed to create a 4-bit adder in Synopsis at an 180nm architecture. Through the use of the following methods: Layout Schematics and Synthetization</p> 
                                     
-                                    <h2>The Code</h2>
-                                        <img src="images/pic02.jpg" width="auto" height="auto" />
+                                    <h2>Starting with the 1-bit Adder</h2>
+                                        <img src="images/1bitadderlayout.png" width="auto" height="auto" />
+                                        <img src="images/1bitaddersym.png" width="auto" height="auto" />
                                         <br /> <br />
-                                        <p>The code was structured in a state-machine format, to make it easier to read and debug later on. It functions on the concept of "ticks", which happen every 50ms or 20 times per second.</p>
-                                        <p>This makes the microcontroller be a little more power-efficient by not having it check for changes every nanosecond, but instead every 50ms, which is nearly unnoticeable to any user given the barebones user interface and controls.</p>
-
-                                        <p>Speaking of which, the clock is designed with 7-hex display behavior in mind, to avoid bugged-out numbers and the like.</p>
+                                        <p>For the 1-bit adder, I started off with the CMOS schematics, of which the layout image above is based on. The hardest part of this part of the project was debugging the layout schematic, given that I wasnt exactly familiar with all of the rules regarding the spacing and sizing of the wells and vias</p>
+                                        <p>After finishing the LVS and DRC tests, we end up with the symbol image above, which can be inserted into other schematics as a whole 1-bit adder.</p>
+                                        
                                         <br />
 
-                                    <h2>Modules and features</h2>
+                                    <h2>Creating the 4-bit Adder</h2>
                                         <img src="images/4bitadderlayout.png" width="1000" height="auto" />
+                                        <img src="images/4bitadderschem.png" width="1000" height="auto" />
+                                        <img src="images/4bitaddersym.png" width="1000" height="auto" />
                                         <br /> <br />
-                                        <p>The Clock is programmed to support custom sounds for alarms, as well as a EEPROM module for it to remember the user's alarm times</p>
-                                        <p>Additionally, times are displayed through LEDs behind transparent plastic, in the form of large 7-hex displays</p>
-                                        <br />
-                                        <p>This clock was made to be easily modifiable as well as easy to assemble, with most parts being easy to place inside of the custom housing and easy to replace in case they break.</p>
+                                        <p> This here 4bit adder is a combination of 4 interconnected 1bit adders, which allows for up to 4 bits, or a single HEX to be added to another.</p>
+                                        <p> The process of interconnecting the adders was rather simple, all you must do is connect the OUTPUT lane from one adder to the other, with the exception of the first and last one. From there its just a matter of having the inputs set up correctly.</p>
                                         <br />
 
-                                    <h2>Printed Board</h2>
+                                    <h2>The 4-bit Adder Compilation/Synthetization</h2>
                                         <img src="images/addersymbol.png" width="1000" height="auto" />
+                                        <img src="images/1bitadderpic.png" width="1000" height="auto" />
                                         <br />
                                         <br />
-                                        <p>I designed custom PCBs for the LEDs and LED drivers to sit on in order to accomodate the rather large size of the hex displays. </p>
-
-                                    <h2>Conclusion/Overall point of the design</h2>
-                                        <img src="images/addersymbol.png" width="1000" height="auto" />
-                                        <br />
-                                        <br />
-                                        <p>This clock was first designed in order to give my girlfriend an alternative to using her cellphone as an alarm for the sake of her health. However I had some fun with the design process and ended up making something that can be marketable. The shape of the housing allows me to make "skins" for the clock and its buttons. Meaning I can customize it and make it look like a cake with little fruits as the buttons instead. Its cute, its sort-of small, sorta cheap, and easy to fix and assemble even for people that are not familiar with electornics.</p>
-
+                                        <p>The point of this part is to finalize the previous parts of the process by creating a schematic of our 4-bit adder as an IC, which could be printed by a machine.</p>
+     
                                     <a href="https://drive.google.com/drive/folders/1qQPtAu5ECQjPW-uMbttbsaiLRJ7jjRVt?usp=sharing" target="_blank" class="button large">Project  File</a>
 							</article>
 
